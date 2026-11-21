@@ -13,13 +13,19 @@ whitespace).
 import os
 import sys
 
-TEXT = (
-    "Judge, the last light is leaving the window in no hurry. "
-    "A dog sleeps by the door, one ear up, one ear down. "
-    "Nothing here needs an answer yet. The quiet is not empty. "
-    "It is only waiting, the way evening waits, "
-    "for you to notice it is yours."
-)
+# The text is held as one sentence per line and joined with single
+# spaces, so the pacing (short sentences, each a small beat of calm)
+# is explicit in the data; the joined result is the entry, nothing more.
+SENTENCES = [
+    "Judge, the last light is leaving the window in no hurry.",
+    "A dog sleeps by the door, one ear up, one ear down.",
+    "Nothing here needs an answer yet.",
+    "The quiet is not empty.",
+    "It is only waiting, the way evening waits,",
+    "for you to notice it is yours.",
+]
+
+TEXT = " ".join(SENTENCES)
 
 
 def main() -> int:
